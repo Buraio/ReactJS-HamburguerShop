@@ -4,12 +4,12 @@ const CartProduct = () => {
   return (
     <>
       <li className="">
-        <img src="" alt="" />
+        <img src="./src/assets/product1.png" alt="" />
         <div className="">
-          <h3></h3>
-          <span></span>
+          <h3>Hamburguer</h3>
+          <span>Sanduiches</span>
         </div>
-        <button></button>
+        <button>Remover</button>
       </li>
     </>
   );

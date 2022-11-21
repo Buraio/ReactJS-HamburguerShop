@@ -1,7 +1,7 @@
 import React from "react";
 
-const CartProduct = ({ Children }) => {
-  return <ul className="">{Children}</ul>;
+const CartList = ({ children }) => {
+  return <ul className="">{children}</ul>;
 };
 
-export default CartProduct;
+export default CartList;

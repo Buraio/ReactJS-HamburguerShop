@@ -5,7 +5,7 @@ const TotalCart = () => {
     <div>
       <div>
         <span>Total</span>
-        <span></span>
+        <span>R$ 40.00</span>
       </div>
       <button className="">Remover todos</button>
     </div>
