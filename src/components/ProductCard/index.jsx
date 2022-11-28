@@ -1,16 +1,17 @@
 import React from "react";
+import StyledProductCard from "./style";
 
-const ProductCard = ({ children }) => {
+const ProductCard = ({ id, name, price, category, imgSrc, children }) => {
   return (
-    <li className="">
-      <img src="./src/assets/product1.png" alt="" />
+    <StyledProductCard id={id}>
+      <img src={imgSrc} alt="" />
       <div className="">
-        <h2>Hamburguer</h2>
-        <span className="">Sanduiches</span>
-        <span className="">R$ 14.00</span>
-        {children}
+        <h2>{name}</h2>
+        <small className="">{category}</small>
+        <span className="">R$ {price}</span>
       </div>
-    </li>
+      {children}
+    </StyledProductCard>
   );
 };
 

@@ -1,11 +1,18 @@
 import React from "react";
+import TotalCart from "./TotalCart";
+import StyledCart from "./style";
 
-const Cart = ({ children }) => {
+const Cart = ({ setCartProduct, setTotalPrice, totalPrice, children }) => {
   return (
-    <div className="">
+    <StyledCart>
       <h2 className="">Carrinho de compras</h2>
       {children}
-    </div>
+      <TotalCart
+        setCartProduct={setCartProduct}
+        totalPrice={totalPrice}
+        setTotalPrice={setTotalPrice}
+      />
+    </StyledCart>
   );
 };
 
