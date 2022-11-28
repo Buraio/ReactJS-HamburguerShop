@@ -36,7 +36,6 @@ const Button = ({ cartProductArray, setCartProduct, setTotalPrice }) => {
         //     }, 0)
         //   }, 2000);
         // })
-
       } catch (err) {
         console.log(err);
       }

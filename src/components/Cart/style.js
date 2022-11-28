@@ -16,6 +16,26 @@ const StyledCart = styled.div`
     align-items: center;
   }
 
+  & ul {
+    max-height: 325px;
+    overflow-y: auto;
+  }
+
+
+  @media (min-width: 375px) {
+
+    width: 100%;
+
+    & > ul {
+      padding: 20px 10px;
+      background-color: var(--gray-4);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+  }
+
 `;
 
 export default StyledCart;

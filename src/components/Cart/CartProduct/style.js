@@ -4,8 +4,15 @@ const StyledCartProduct = styled.li`
 
   height: 80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 
+  & > div {
+    transform: translateX(-30px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
   & > img {
     max-width: 80px;
@@ -14,9 +21,8 @@ const StyledCartProduct = styled.li`
   }
 
   & > button {
-    
+    color: var(--gray-2);
   }
-
 
 `;
 

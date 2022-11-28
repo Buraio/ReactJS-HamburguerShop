@@ -14,6 +14,22 @@ const StyledHeader = styled.header`
   & > div > img {
     max-width: 160px;
   }
+
+  @media (min-width: 375px) {
+
+    height: 130px;
+    padding: 15px 0;
+
+  }
+
+  @media (min-width: 1000px) {
+
+    & > div {
+      flex-direction: row;
+    }
+
+  }
+
 `;
 
 export default StyledHeader;
