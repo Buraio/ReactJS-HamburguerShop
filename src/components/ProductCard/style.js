@@ -34,6 +34,13 @@ const StyledProductCard = styled.li`
     font-size: var(--font-size-5);
     color: var(--color-primary);
   }
+
+  @media (min-width: 375px) {
+
+    flex-shrink: 0;
+
+  }
+
 `;
 
 export default StyledProductCard;

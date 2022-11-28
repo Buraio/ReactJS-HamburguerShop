@@ -1,13 +1,12 @@
 import React from "react";
+import StyledInputSearch from "./style";
 
 const InputSearch = () => {
   return (
-    <>
-      <div className="">
-        <input type="text" className="" placeholder="Digitar pesquisa" />
-        <button className="">Pesquisar</button>
-      </div>
-    </>
+    <StyledInputSearch>
+      <input type="text" className="" placeholder="Digitar pesquisa" />
+      <button className="">Pesquisar</button>
+    </StyledInputSearch>
   );
 };
 
