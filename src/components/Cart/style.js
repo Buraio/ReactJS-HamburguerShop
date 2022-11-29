@@ -36,6 +36,18 @@ const StyledCart = styled.div`
 
   }
 
+  @media (min-width: 800px) {
+
+    max-width: 450px;
+    margin: 0 auto;
+
+  }
+
+  @media (min-width: 1100px) {
+    max-width: 360px;
+    margin: 0;
+  }
+
 `;
 
 export default StyledCart;

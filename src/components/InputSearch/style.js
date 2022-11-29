@@ -23,7 +23,7 @@ const StyledInputSearch = styled.div`
   }
 
   & input:focus {
-    border: none;
+    outline: none;
   }
 
   & button {
@@ -34,7 +34,7 @@ const StyledInputSearch = styled.div`
     font-size: 0.875rem;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 800px) {
 
     max-width: 365px;
 

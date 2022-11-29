@@ -50,7 +50,7 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
-  h1, h2, h3, h4, h5, h6, p, a, span, li, button, input{
+  h1, h2, h3, h4, h5, h6, p, a, span, small, li, button, input{
     font-family: 'Inter', sans-serif;
   }
 
@@ -58,10 +58,10 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
   }
 
-  @media (min-width: 375px) {
+  @media (min-width: 1100px) {
 
     body {
-      overflow-x: hidden;
+      overflow: hidden;
     }
 
   }

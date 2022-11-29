@@ -14,6 +14,14 @@ const StyledCartProduct = styled.li`
     gap: 10px;
   }
 
+  & > div > h3 {
+    font-size: var(--font-size-5);
+  }
+
+  & > div > span {
+    font-size: var(--font-size-6);
+  }
+
   & > img {
     max-width: 80px;
     background-color: var(--gray-3);

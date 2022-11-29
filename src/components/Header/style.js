@@ -22,7 +22,7 @@ const StyledHeader = styled.header`
 
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 800px) {
 
     & > div {
       flex-direction: row;

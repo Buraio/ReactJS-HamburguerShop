@@ -7,19 +7,19 @@ const TotalCart = ({ setCartProduct, totalPrice, setTotalPrice }) => {
     setTotalPrice(0);
   };
 
-  if (totalPrice !== 0) {
+  // if (totalPrice !== 0) {
     return (
       <StyledTotalCart>
         <div>
           <span>Total</span>
-          <span>R$ {totalPrice}</span>
+          <small>R$ {totalPrice}</small>
         </div>
         <button className="" onClick={removeAllFromCart}>
           Remover todos
         </button>
       </StyledTotalCart>
     );
-  }
+  // }
 };
 
 export default TotalCart;
