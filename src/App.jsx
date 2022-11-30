@@ -9,21 +9,34 @@ import StyledContainer from "./styles/container";
 function App() {
   const [productArray, setProduct] = useState([]);
   const [cartProductArray, setCartProduct] = useState([]);
+  const [filteredProducts, setFilter] = useState([]);
   const [cartTotalPrice, setTotalPrice] = useState(0);
+
+  const totalValue = () => {
+    setTotalPrice(() => {
+        return cartProductArray.reduce((previous, current) => {
+          return previous + current.price;
+        }, 0);
+    });
+  };
 
   return (
     <div className="App">
       <Header>
-        <InputSearch></InputSearch>
+        <InputSearch
+          productArray={productArray}
+          setFilter={setFilter}
+        ></InputSearch>
       </Header>
 
       <StyledContainer>
         <ProductList
           productArray={productArray}
+          filteredProducts={filteredProducts}
           cartProductArray={cartProductArray}
           setProduct={setProduct}
           setCartProduct={setCartProduct}
-          setTotalPrice={setTotalPrice}
+          totalValue={totalValue}
         ></ProductList>
 
         <Cart
@@ -31,6 +44,7 @@ function App() {
           setCartProduct={setCartProduct}
           totalPrice={cartTotalPrice}
           setTotalPrice={setTotalPrice}
+          totalValue={totalValue}
         >
           <CartList
             productArray={cartProductArray}

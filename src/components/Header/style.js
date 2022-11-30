@@ -16,20 +16,15 @@ const StyledHeader = styled.header`
   }
 
   @media (min-width: 375px) {
-
     height: 130px;
     padding: 15px 0;
-
   }
 
   @media (min-width: 800px) {
-
     & > div {
       flex-direction: row;
     }
-
   }
-
 `;
 
 export default StyledHeader;

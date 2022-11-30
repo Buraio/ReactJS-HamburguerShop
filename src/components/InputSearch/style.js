@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-const StyledInputSearch = styled.div`
-
+const StyledInputSearch = styled.form`
   width: 100%;
   height: 60px;
   padding: 0 10px;
@@ -35,15 +34,12 @@ const StyledInputSearch = styled.div`
   }
 
   @media (min-width: 800px) {
-
     max-width: 365px;
 
     & input {
       max-width: 220px;
     }
-
   }
-
 `;
 
 export default StyledInputSearch;

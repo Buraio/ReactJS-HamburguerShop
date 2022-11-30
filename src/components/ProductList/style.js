@@ -5,6 +5,7 @@ const StyledProductList = styled.ul`
   padding-right: 30px;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: nowrap;
   gap: 20px;
   overflow-x: auto;
