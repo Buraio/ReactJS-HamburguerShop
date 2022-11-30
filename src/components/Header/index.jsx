@@ -1,12 +1,13 @@
 import React from "react";
 import StyledContainer from "../../styles/container";
 import StyledHeader from "./style";
+import logoImg from '../../assets/logo.svg';
 
 const Header = ({ children }) => {
   return (
     <StyledHeader>
       <StyledContainer>
-        <img src={"./src/assets/logo.svg"} />
+        <img src={logoImg} />
         {children}
       </StyledContainer>
     </StyledHeader>

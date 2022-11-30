@@ -29,7 +29,6 @@ const Button = ({ setCartProduct, totalValue }) => {
             });
           }
         });
-
       } catch (err) {
         console.log(err);
       }
