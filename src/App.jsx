@@ -14,9 +14,9 @@ function App() {
 
   const totalValue = () => {
     setTotalPrice(() => {
-        return cartProductArray.reduce((previous, current) => {
-          return previous + current.price;
-        }, 0);
+      return cartProductArray.reduce((previous, current) => {
+        return previous + current.price;
+      }, 0);
     });
   };
 
