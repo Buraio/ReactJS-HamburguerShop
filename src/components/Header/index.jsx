@@ -1,7 +1,7 @@
 import React from "react";
 import StyledContainer from "../../styles/container";
 import StyledHeader from "./style";
-import logoImg from '../../assets/logo.svg';
+import logoImg from "../../assets/logo.svg";
 
 const Header = ({ children }) => {
   return (

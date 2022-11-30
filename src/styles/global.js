@@ -61,9 +61,13 @@ const GlobalStyles = createGlobalStyle`
   @media (min-width: 1100px) {
 
     body {
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
+  }
+
+  .two {
+    padding-bottom: 50px;
   }
 
 `;

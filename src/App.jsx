@@ -5,6 +5,8 @@ import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
 import CartList from "./components/CartList";
 import StyledContainer from "./styles/container";
+import NoProduct from "./components/Cart/NoProduct";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [productArray, setProduct] = useState([]);
@@ -29,7 +31,7 @@ function App() {
         ></InputSearch>
       </Header>
 
-      <StyledContainer>
+      <StyledContainer className="two">
         <ProductList
           productArray={productArray}
           filteredProducts={filteredProducts}
@@ -46,12 +48,29 @@ function App() {
           setTotalPrice={setTotalPrice}
           totalValue={totalValue}
         >
-          <CartList
-            productArray={cartProductArray}
-            setCartProduct={setCartProduct}
-          />
+          {cartProductArray.length === 0 ? (
+            <NoProduct />
+          ) : (
+            <CartList
+              productArray={cartProductArray}
+              setCartProduct={setCartProduct}
+            />
+          )}
         </Cart>
       </StyledContainer>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        limit={3}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        draggable
+        pauseOnHover={false}
+        theme="colored"
+      />
     </div>
   );
 }

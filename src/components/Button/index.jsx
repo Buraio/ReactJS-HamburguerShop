@@ -1,8 +1,13 @@
 import React from "react";
 import { burgerKenzieApi } from "../../services/api/api";
 import StyledAddButton from "./style";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Button = ({ setCartProduct, totalValue }) => {
+
+  const cartErrorToast = () => toast.error('Não é possível adicionar mais itens');
+
   const addToCart = async (event) => {
     const parentId = parseInt(event.target.parentElement.id);
 
@@ -24,6 +29,7 @@ const Button = ({ setCartProduct, totalValue }) => {
               if (validateSameItemArray.length === 0) {
                 return [...oldProductArray, product];
               } else {
+                cartErrorToast();
                 return [...oldProductArray];
               }
             });
