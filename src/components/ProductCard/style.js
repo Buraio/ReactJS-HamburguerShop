@@ -36,11 +36,8 @@ const StyledProductCard = styled.li`
   }
 
   @media (min-width: 375px) {
-
     flex-shrink: 0;
-
   }
-
 `;
 
 export default StyledProductCard;

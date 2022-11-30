@@ -6,17 +6,16 @@ import StyledProductList from "./style";
 
 const ProductList = ({
   productArray,
+  filteredProducts,
   cartProductArray,
   setProduct,
   setCartProduct,
-  setTotalPrice,
+  totalValue,
 }) => {
   useEffect(() => {
     const getProdutcList = async () => {
       try {
         const request = await burgerKenzieApi.get("products");
-        console.log(request.data);
-
         setProduct(request.data);
       } catch (err) {
         console.log(err);
@@ -26,26 +25,32 @@ const ProductList = ({
     getProdutcList();
   }, []);
 
+  const returnProductCard = (array) => {
+    return array.map((product, index) => {
+      return (
+        <ProductCard
+          key={index}
+          id={product.id}
+          name={product.name}
+          price={product.price}
+          category={product.category}
+          imgSrc={product.img}
+        >
+          <Button
+            cartProductArray={cartProductArray}
+            setCartProduct={setCartProduct}
+            totalValue={totalValue}
+          ></Button>
+        </ProductCard>
+      );
+    });
+  };
+
   return (
     <StyledProductList>
-      {productArray.map((product, index) => {
-        return (
-          <ProductCard
-            key={index}
-            id={product.id}
-            name={product.name}
-            price={product.price}
-            category={product.category}
-            imgSrc={product.img}
-          >
-            <Button
-              cartProductArray={cartProductArray}
-              setCartProduct={setCartProduct}
-              setTotalPrice={setTotalPrice}
-            ></Button>
-          </ProductCard>
-        );
-      })}
+      {filteredProducts.length === 0
+        ? returnProductCard(productArray)
+        : returnProductCard(filteredProducts)}
     </StyledProductList>
   );
 };

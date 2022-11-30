@@ -2,9 +2,10 @@ import React from "react";
 import { burgerKenzieApi } from "../../services/api/api";
 import StyledAddButton from "./style";
 
-const Button = ({ cartProductArray, setCartProduct, setTotalPrice }) => {
+const Button = ({ setCartProduct, totalValue }) => {
   const addToCart = async (event) => {
     const parentId = parseInt(event.target.parentElement.id);
+
     const getProducts = async () => {
       try {
         const request = await burgerKenzieApi.get("products");
@@ -29,13 +30,6 @@ const Button = ({ cartProductArray, setCartProduct, setTotalPrice }) => {
           }
         });
 
-        // setTotalPrice(async () => {
-        //   setTimeout(() => {
-        //     cartProductArray.reduce((previous, current) => {
-        //       console.log(previous)
-        //     }, 0)
-        //   }, 2000);
-        // })
       } catch (err) {
         console.log(err);
       }

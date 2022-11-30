@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledCartProduct = styled.li`
-
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -31,7 +30,6 @@ const StyledCartProduct = styled.li`
   & > button {
     color: var(--gray-2);
   }
-
 `;
 
 export default StyledCartProduct;

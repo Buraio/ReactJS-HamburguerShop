@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledTotalCart = styled.div`
-
   min-height: 150px;
   padding: 20px 10px;
   background-color: var(--gray-4);
@@ -16,12 +15,14 @@ const StyledTotalCart = styled.div`
     justify-content: space-between;
   }
 
-  & > div > span, small {
+  & > div > span,
+  small {
     font-weight: var(--font-weight-2);
     font-size: var(--font-size-5);
   }
-  
-  & > div > small, & > button {
+
+  & > div > small,
+  & > button {
     color: var(--gray-2);
   }
 
@@ -33,7 +34,6 @@ const StyledTotalCart = styled.div`
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-2);
   }
-
 `;
 
 export default StyledTotalCart;

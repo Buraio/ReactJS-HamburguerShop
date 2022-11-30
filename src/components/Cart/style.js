@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledCart = styled.div`
-
   width: 365px;
   min-height: 225px;
 
@@ -21,9 +20,7 @@ const StyledCart = styled.div`
     overflow-y: auto;
   }
 
-
   @media (min-width: 375px) {
-
     width: 100%;
 
     & > ul {
@@ -33,21 +30,17 @@ const StyledCart = styled.div`
       flex-direction: column;
       gap: 20px;
     }
-
   }
 
   @media (min-width: 800px) {
-
     max-width: 450px;
     margin: 0 auto;
-
   }
 
   @media (min-width: 1100px) {
     max-width: 360px;
     margin: 0;
   }
-
 `;
 
 export default StyledCart;
